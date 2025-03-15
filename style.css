@@ -196,14 +196,14 @@ section {
 }
 .decorativeElement {
   max-width: 85px;
-  right: 16%;
-  position: absolute;
-  bottom: 17%;
   z-index: -1;
+  margin-left: -83px;
+  max-height: 100px;
 }
 /* booktrip */
 .booktripTitle {
   text-align: left;
+  margin-bottom: 50px;
 }
 .booktripSubtitle {
   text-align: left;
@@ -328,13 +328,74 @@ section {
 .userImage {
   max-width: 70px;
 }
+.testimonialcardInactive {
+  position: absolute;
+  bottom: -55px;
+  left: 65%;
+  z-index: -2;
+  opacity: 0.7;
+}
 .testimonialContainer {
   max-width: 32%;
 }
 .testimonialsWrapper {
   display: flex;
   justify-content: center;
-  gap: 8%;
+  gap: 20%;
+  position: relative;
+}
+.testimonialIocnWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  gap: 30px;
+  justify-content: flex-end;
+  margin-right: 0;
+  position: absolute;
+  right: -66px;
+  top: 100px;
+}
+.inactiveImage {
+  visibility: hidden;
+}
+.testimonialInactiveContent {
+  visibility: hidden;
+  opacity: 0.2;
+}
+.inactiveWrapper {
+  box-shadow: none;
+  background: none;
+  box-shadow: none;
+  border: 1px solid #f7f7f7;
+}
+.arrow.leftArrow {
+  opacity: 0.2;
+}
+
+.dots {
+  display: flex;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.dot.active {
+  background-color: #000;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background-color: #555;
+}
+.testimonialImageWrapper {
+  margin-left: -25px;
 }
 .testimonialTextWrapper {
   background: white;
@@ -345,6 +406,7 @@ section {
   transition: opacity 0.5s ease-in-out;
   font-size: 15px;
   width: 366px;
+  margin-top: -12px;
 }
 .userName {
   font-size: 16px;
@@ -681,10 +743,12 @@ input[type="email"] {
     flex-direction: column;
   }
   .decorativeElement {
-    right: 3%;
-    bottom: 5%;
+    right: 1%;
+    bottom: 14%;
     z-index: -1;
-  }
+    max-width: 65px;
+    position: absolute;
+}
   /* travel  */
   .bookingContainer {
     flex-direction: column;
@@ -695,14 +759,26 @@ input[type="email"] {
   .statusCard {
     position: unset;
   }
-
+  /* testimonial  */
+  .testimonialcardInactive {
+    left: 20px;
+  }
+  .testimonialIocnWrapper {
+    top: 50%;
+  }
   .testimonialsWrapper {
     flex-direction: column;
+  }
+  .testimonialTextWrapper {
+    width: 160px; 
+    margin-top: -25px;
   }
   .testimonialContainer {
     max-width: 100%;
     margin-top: 28px;
+    position: relative;
   }
+
   .airlineLogo {
     margin: 32px;
   }
@@ -744,14 +820,14 @@ input[type="email"] {
     top: 20px;
     right: 4px;
     width: 100px;
-}
-.ring-bottom-left {
-  position: absolute;
-  bottom: 0;
-  left: -33px;
-  width: 140px;
-  top: 36%;
-}
+  }
+  .ring-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: -33px;
+    width: 140px;
+    top: 36%;
+  }
   .subscriptionForm {
     flex-direction: column;
     margin-top: 0;
@@ -765,7 +841,7 @@ input[type="email"] {
     max-width: 30px;
     top: 10px;
     right: -11px;
-}
+  }
   .subscribeButton {
     padding: 12px 20px;
   }
@@ -842,4 +918,9 @@ input[type="email"] {
     right: -12px;
     left: -10px;
   }
+  .testimonialIocnWrapper{
+    top: 0;
+    bottom: -142px;
+}
+  
 }

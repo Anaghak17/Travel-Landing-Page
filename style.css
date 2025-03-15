@@ -126,13 +126,14 @@ section {
   margin: 0 auto;
   width: 190px;
 }
-.serviceCard, .serviceCardtwo {
+.serviceCard,
+.serviceCardtwo {
   border-radius: 16px;
   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.1);
   width: 165px;
-  padding: 42px; 
+  padding: 42px;
   position: relative;
-  background:#fff;
+  background: #fff;
 }
 .serviceCard {
   box-shadow: unset;
@@ -169,7 +170,6 @@ section {
   align-items: center;
   gap: 50px;
   margin-top: 50px;
-  position: relative;
 }
 .destinationSection {
   position: relative;
@@ -286,6 +286,18 @@ section {
   font-size: 12px;
   font-weight: 500;
 }
+.tripCard::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -67px;
+  left: 10px;
+  background: radial-gradient(rgba(96, 186, 236, 0.4), transparent);
+  border-radius: 24px;
+  z-index: -1;
+  filter: blur(50px);
+}
 .statusTitle {
   margin: 0;
 }
@@ -359,7 +371,7 @@ section {
 }
 .subscriptionText {
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   padding-bottom: 50px;
   margin-bottom: 60px;
@@ -369,8 +381,8 @@ section {
 .sendIcon {
   max-width: 50px;
   position: absolute;
-  top: 70px;
-  right: 176px;
+  top: -20px;
+  right: -15px;
   padding: 12px;
   display: flex;
   align-items: center;
@@ -381,7 +393,7 @@ section {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  gap: 28px;
+  gap: 18px;
 }
 .subscriptionSection {
   position: relative;
@@ -389,7 +401,7 @@ section {
 .subscriptionWrapper {
   border-radius: 60px 60px 60px 10px;
   padding: 55px 30px;
-  overflow: hidden;
+  position: relative;
   background: rgba(223, 215, 249, 0.2);
 }
 input[type="email"] {
@@ -400,9 +412,10 @@ input[type="email"] {
 .emailInput {
   display: flex;
   gap: 10px;
-  padding: 15px 100px 15px 20px;
+  padding: 18px 156px 18px 20px;
   border-radius: 8px;
   font-size: 14px;
+  z-index: 999;
   outline: none;
   background: #fff;
   transition: border 0.3s ease;
@@ -426,16 +439,16 @@ input[type="email"] {
 }
 .ring-top-right {
   position: absolute;
-  top: 96px;
-  right: 196px;
-  width: 229px;
+  top: 0;
+  right: 2px;
+  width: 225px;
 }
 .ring-bottom-left {
   position: absolute;
   bottom: 0;
-  left: 120px;
-  width: 436px;
-  top: 22%;
+  left: -73px;
+  width: 442px;
+  top: 5%;
 }
 /* header  */
 #masthead {
@@ -457,8 +470,8 @@ input[type="email"] {
   box-shadow: 0 3px 10px #f8c76b5e;
 }
 .site-branding {
-  width: 100px;
-  margin-left: -63%;
+  width: 300px;
+  display: flex;
 }
 .main-navigation ul {
   display: flex;
@@ -556,9 +569,9 @@ input[type="email"] {
     display: none;
   }
   .site-branding {
-    width: 100px;
-    margin-left: -63%;
-}
+    width: 175px;
+    margin-left: -40%;
+  }
   .main-navigation.toggled ul {
     display: flex;
     flex-direction: column;
@@ -579,7 +592,7 @@ input[type="email"] {
     top: 18px;
     color: #000;
   }
- 
+
   section {
     padding: 15px 48px;
   }
@@ -675,6 +688,7 @@ input[type="email"] {
   .statusCard {
     position: unset;
   }
+
   .testimonialsWrapper {
     flex-direction: column;
   }
@@ -720,17 +734,17 @@ input[type="email"] {
     margin-bottom: 6px;
   }
   .ring-top-right {
-    top: 96px;
-    right: 50px;
+    top: 20px;
+    right: 4px;
     width: 100px;
-  }
-  .ring-bottom-left {
-    position: absolute;
-    bottom: 0;
-    left: 17px;
-    width: 140px;
-    top: 36%;
-  }
+}
+.ring-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: -33px;
+  width: 140px;
+  top: 36%;
+}
   .subscriptionForm {
     flex-direction: column;
     margin-top: 0;
@@ -742,10 +756,83 @@ input[type="email"] {
   }
   .sendIcon {
     max-width: 30px;
-    top: 50px;
-    right: 45px;
-  }
+    top: 10px;
+    right: -11px;
+}
   .subscribeButton {
     padding: 12px 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .bannerContainer {
+    margin-top: 50px;
+  }
+  .site-branding {
+    width: 100px;
+    margin-left: -12%;
+  }
+  .main-navigation ul {
+    gap: 14px;
+  }
+  #masthead {
+    gap: 50px;
+  }
+  .bannerTitle {
+    font-size: 38px;
+  }
+  .bannerSubtitle {
+    font-size: 15px;
+  }
+  .primaryBtn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  .button-container {
+    gap: 10px;
+  }
+  .play-icon {
+    width: 24px;
+  }
+  .playDemoBtn {
+    font-size: 13px;
+  }
+  .play-demo {
+    gap: 8px;
+  }
+  .footerContent {
+    font-size: 16px;
+  }
+  .footer-link {
+    font-size: 14px;
+  }
+  .footer-logo {
+    max-width: 120px;
+  }
+  .appIcon {
+    max-width: 70px;
+  }
+  .storeTitle {
+    font-size: 16px;
+  }
+  .socialMedias {
+    max-width: 150px;
+  }
+  .serviceCard,
+  .serviceCardtwo {
+    padding: 30px;
+  }
+  .servicesContainer {
+    gap: 8px;
+  }
+  .statusCard {
+    bottom: 42px;
+    right: -5%;
+    gap: 10px;
+    width: 155px;
+  }
+  .serviceCardtwo:before {
+    width: 60px;
+    right: -12px;
+    left: -10px;
   }
 }

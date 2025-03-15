@@ -112,7 +112,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
+  gap: 48px;
   margin-top: 80px;
 }
 .serviceCardTitle {
@@ -124,27 +124,33 @@ section {
 }
 .serviceCardContent {
   font-size: 16px;
-  width: 60%;
   margin: 0 auto;
+  width: 190px;
 }
-.serviceCardtwo {
+.serviceCard, .serviceCardtwo {
   border-radius: 16px;
   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.1);
-  width: 225px;
-  padding: 42px;
-  z-index: 1;
+  width: 165px;
+  padding: 42px; 
   position: relative;
+  background:#fff;
+}
+.serviceCard {
+  box-shadow: unset;
 }
 .serviceCardtwo:before {
   content: "";
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 90px;
   background: url(images/Rectangle\ 157.png);
-  left: -40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  left: -38px;
   right: 0;
   bottom: -17%;
-  z-index: -1;
+  z-index: -2;
 }
 .serviceImageWrapper {
   position: absolute;
@@ -153,6 +159,7 @@ section {
   top: 15%;
   bottom: 0;
 }
+
 .servicesSection {
   position: relative;
 }
@@ -541,9 +548,6 @@ input[type="email"] {
     padding: 15px 20px 15px 0;
     background: #fff;
   }
-  .site-branding {
-    margin-left: -30%;
-  }
   .main-navigation ul {
     display: none;
   }
@@ -565,18 +569,18 @@ input[type="email"] {
     height: 18px;
     font-size: 61px;
     position: absolute;
-    right: 67px;
-    top: 18px;
+    right: 36px;
+    top: 26px;
     color: #000;
   }
   section {
     padding: 15px 48px;
-}
+  }
   /* banner  */
   .hero {
     background-size: 100% 100%;
     height: unset;
-}
+  }
   .bannerContainer {
     display: flex;
     flex-direction: column;
@@ -649,30 +653,92 @@ input[type="email"] {
   .destionationWrapper {
     flex-direction: column;
   }
+  .decorativeElement {
+    right: 3%;
+    bottom: 5%;
+    z-index: -1;
+  }
   /* travel  */
   .bookingContainer {
     flex-direction: column;
-}
-.stepIcon {
-  width: 60px;
-}
-.statusCard {
-  position: unset;
-}
-.testimonialsWrapper {
-  flex-direction: column;
-}
-.testimonialContainer {
-  max-width: 100%;
-  margin-top: 28px;
-}
-.airlineLogo {
-  margin: 32px;
-}
-.airlineLogoWrapper {
-  flex-direction: column;
-}
-.featured {
-  margin: 30px;
-}
+  }
+  .stepIcon {
+    width: 60px;
+  }
+  .statusCard {
+    position: unset;
+  }
+  .testimonialsWrapper {
+    flex-direction: column;
+  }
+  .testimonialContainer {
+    max-width: 100%;
+    margin-top: 28px;
+  }
+  .airlineLogo {
+    margin: 32px;
+  }
+  .airlineLogoWrapper {
+    flex-direction: column;
+  }
+  .featured {
+    margin: 30px;
+  }
+  /* footer  */
+  .footerContainer {
+    flex-direction: column;
+  }
+  .footerContent {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  footer-link {
+    font-size: 14px;
+  }
+  .social-media-wrapper {
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .socialMedias {
+    gap: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  /* subscription form  */
+  .subscriptionText {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  .ring-top-right {
+    top: 96px;
+    right: 50px;
+    width: 100px;
+  }
+  .ring-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    width: 140px;
+    top: 36%;
+  }
+  .subscriptionForm {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .emailInput {
+    display: flex;
+    gap: 10px;
+    padding: 15px 23px 15px 20px;
+  }
+  .sendIcon {
+    max-width: 30px;
+    top: 50px;
+    right: 45px;
+  }
+  .subscribeButton {
+    padding: 12px 20px;
+  }
 }
